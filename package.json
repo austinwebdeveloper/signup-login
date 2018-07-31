@@ -1,6 +1,6 @@
 {
   "name": "signup-login",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "server/server.js",
   "engines": {
     "node": ">=4"
@@ -15,7 +15,7 @@
     "email": "vijayalakshmi.nueve@gmail.com"
   },
   "dependencies": {
-    "compression": "^1.0.3",
+    "compression": "^1.0.4",
     "cors": "^2.5.2",
     "fs": "0.0.1-security",
     "helmet": "^3.10.0",
@@ -34,7 +34,7 @@
   },
  "repository": {
     "type": "git",
-    "url": "git+https://github.com/vijianrao/signup-login.git"
+    "url": "git+https://github.com/nuevesolutions/signup-login.git"
   },
   "keywords": [
     "user",
@@ -42,9 +42,9 @@
     "signup"
   ],
   "bugs": {
-    "url": "https://github.com/vijianrao/signup-login/issues"
+    "url": "https://github.com/nuevesolutions/signup-login/issues"
   },
   "license": "ISC",
-  "homepage": "https://github.com/vijianrao/signup-login#readme",
+  "homepage": "https://github.com/nuevesolutionsot/signup-login#readme",
   "description": "Node Signup and Login Module"
 }
