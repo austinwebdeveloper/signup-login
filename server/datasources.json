@@ -1,0 +1,1 @@
+{"db":{"name":"db","connector":"memory"},"mongo":{"host":"35.168.122.251","port":27017,"url":"","database":"loopbackapi","password":"","user":"","connector":"mongodb"}}
