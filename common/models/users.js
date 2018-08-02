@@ -87,7 +87,7 @@ module.exports = function(User) {
       return fn.promise;
     }
 
-    self.findOne({where: {or: [{email: query.email}, {username: query.email}]}}, function(err, user) {
+    self.findOne({where: {or: [{email: query.email}, {username: query.username}]}}, function(err, user) {
       var defaultError = new Error(g.f('login failed'));
       defaultError.statusCode = 401;
       defaultError.code = 'LOGIN_FAILED';

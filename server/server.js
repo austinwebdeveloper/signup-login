@@ -7,7 +7,26 @@ var models = require('../create_model');
 
 var app = module.exports = loopback();
 
- app.start = function () {
+
+
+app.use(loopback.token({
+  model: app.models.CustomToken
+}));
+
+// Bootstrap the application, configure models, datasources and middleware.
+// Sub-apps like REST API are mounted via boot scripts.
+setTimeout(()=>{
+   boot(app, __dirname, function(err) {
+  if (err) throw err;
+
+  // start the server if `$n ode server.js`
+  if (require.main === module)
+    app.start();
+});
+},500)
+
+app.start = function () {
+  setTimeout(()=>{
   // start the web server
   return app.listen(function() {
     app.emit('started');
@@ -17,24 +36,16 @@ var app = module.exports = loopback();
       var explorerPath = app.get('loopback-component-explorer').mountPath;
       console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
     }
+  
   });
+},500)
 };
 
-app.use(loopback.token({
-  model: app.models.CustomToken
-}));
 
-// Bootstrap the application, configure models, datasources and middleware.
-// Sub-apps like REST API are mounted via boot scripts.
-boot(app, __dirname, function(err) {
-  if (err) throw err;
 
-  // start the server if `$ node server.js`
-  if (require.main === module)
-    app.start();
-});
 module.exports = {
   datasource: datasources,
   model:models,
-  app: app
+  app: app,
+  boot: boot
 }

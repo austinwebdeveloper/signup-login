@@ -1,6 +1,6 @@
 {
-  "name": "signup-login",
-  "version": "1.0.3",
+  "name": "signup-login-module",
+  "version": "1.0.2",
   "main": "server/server.js",
   "engines": {
     "node": ">=4"
@@ -11,11 +11,11 @@
     "posttest": "npm run lint && nsp check"
   },
   "author": {
-    "name": "viji",
-    "email": "vijayalakshmi.nueve@gmail.com"
+    "name": "atxwebdesigner1",
+    "email": "atxwebdesigner1@gmail.com"
   },
   "dependencies": {
-    "compression": "^1.0.4",
+    "compression": "^1.0.3",
     "cors": "^2.5.2",
     "fs": "0.0.1-security",
     "helmet": "^3.10.0",

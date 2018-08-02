@@ -19,17 +19,17 @@ var confname= configuration.name
 if(modelconfigData.users){
 modelconfigData[confname] = modelconfigData.users;
 delete modelconfigData['users']; // or use => delete test['blue'];
- modelconfigData[confname] = {"dataSource":configuration.dataSource,"public":true};
+ modelconfigData[confname] = {"dataSource":"mongo","public":true};
 
 }
 else{
   var getmodelKey = Object.keys(modelconfigData).pop();
-  console.log(getmodelKey);
+ // console.log(getmodelKey);
 if(getmodelKey !== 'Role')
 {
   delete modelconfigData[getmodelKey]; 
 }
- modelconfigData[confname] = {"dataSource":configuration.datasource,"public":true};
+ modelconfigData[confname] = {"dataSource":"mongo","public":true};
 }
 
 fs.writeFileSync(modelConfigfile, JSON.stringify(modelconfigData)); 
@@ -65,17 +65,21 @@ let modelJson = fs.readFileSync(modelfile);
 let modelData = JSON.parse(modelJson); 
 modelData.name = configuration.name; 
 modelData.properties = configuration.properties; 
-fs.writeFileSync(modelfile, JSON.stringify(modelData)); 
+fs.writeFileSync(modelfile, JSON.stringify(modelData));
+// console.log('successfully model json file rename to '+configuration.name+'.json')
+
 fromDir(__dirname +'/common/models/',/\.js$/,function(js_file){
  // console.log('-- found: ',js_file);
 fs.rename(js_file,  __dirname +'/common/models/'+configuration.name+'.js', function(err) {
+ // console.log('successfully model js file rename to '+configuration.name+'.js')
+
 });
 });
-return modelData;
 }); 
 
 });
 
+return modelconfigData;
 
 
   };
