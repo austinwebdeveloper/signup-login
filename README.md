@@ -10,13 +10,13 @@ Node.js , and the platform-specific tools needed to compile native NPM modules (
 To install the signup-login module, simply run the following command within your app's directory:
 
 ```sh
-npm i  signup-login --save
+npm i  signup-login-module --save
 ```
 
 ### Development
 
 ```sh
-var loopback = require("signup-login");
+var loopback = require("signup-login-module");
 ```
 
 Database Configuration:
@@ -69,10 +69,12 @@ var modelConfig = {
  var model = new loopback.model(modelConfig); 
 ```
 #### Include following code in your index file:
+ 
 ```sh 
  var appStart = loopback.app;
  appStart.start();
 ```
+ 
 Verify the deployment by navigating to your server address in your preferred browser.
 
 ```sh
@@ -80,7 +82,7 @@ http://host:port/explorer
 ``` 
 Example:
 ```sh
-http://localhost:57304/explorer
+http://localhost:8001/explorer
 ``` 
 
 #Licence
