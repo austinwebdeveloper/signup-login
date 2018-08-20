@@ -46,7 +46,7 @@ var dbConfig = {"name":"","options":{
 var database = new loopback.datasource(dbConfig);
 ```
 
-##### Note: No need to decalre email, username and password in schema but you need to add required field for username if you want it as required field.
+##### Note: No need to declare email, username and password in schema but you need to add required field for username if you want it as required field.
 
 Example Model Configuration:
 
