@@ -67,7 +67,7 @@ modelData.name = configuration.name;
 modelData.properties = configuration.properties; 
 fs.writeFileSync(modelfile, JSON.stringify(modelData));
 // console.log('successfully model json file rename to '+configuration.name+'.json')
-/*
+
 fromDir(__dirname +'/common/models/',/\.js$/,function(js_file){
  // console.log('-- found: ',js_file);
 fs.rename(js_file,  __dirname +'/common/models/'+configuration.name+'.js', function(err) {
@@ -75,7 +75,7 @@ fs.rename(js_file,  __dirname +'/common/models/'+configuration.name+'.js', funct
 
 });
 });
-*/
+
 }); 
 
 });

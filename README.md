@@ -18,7 +18,17 @@ npm i  signup-login-module --save
 ```sh
 var loopback = require("signup-login-module");
 ```
+Port Configuration:
 
+```sh
+
+var port = new loopback.port(port address);
+
+```
+Example:
+```sh
+var port = new loopback.port(8080);
+``` 
 Database Configuration:
 
 ```sh
@@ -36,6 +46,8 @@ var dbConfig = {"name":"","options":{
 var database = new loopback.datasource(dbConfig);
 ```
 
+##### Note: No need to decalre email, username and password in schema but you need to add required field for username if you want it as required field.
+
 Example Model Configuration:
 
 ```sh
@@ -43,10 +55,7 @@ var modelConfig = {
 
    "name": "driver",
    "properties": {
-    "email": {
-      "type": "string",
-      "required": true
-    },
+   
     "firstname": {
       "type": "string"
     },
@@ -57,10 +66,7 @@ var modelConfig = {
       "type": "string",
       "required": true
     },
-    "password": {
-      "type": "string",
-      "required": true
-    },
+   
     "phone": {
       "type": "number"
     }
@@ -74,6 +80,12 @@ var modelConfig = {
  var appStart = loopback.app;
  appStart.start();
 ```
+
+#### Run following in your terminal to start the APP:
+ 
+```sh 
+ npm start
+``` 
  
 Verify the deployment by navigating to your server address in your preferred browser.
 

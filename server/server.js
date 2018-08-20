@@ -3,6 +3,7 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 var datasources = require('../create_datasource');
 var models = require('../create_model');
+var port = require('../update_port');
 
 
 var app = module.exports = loopback();
@@ -23,7 +24,7 @@ setTimeout(()=>{
   if (require.main === module)
     app.start();
 });
-},500)
+},1800)
 
 app.start = function () {
   setTimeout(()=>{
@@ -38,7 +39,7 @@ app.start = function () {
     }
   
   });
-},500)
+},1800)
 };
 
 
@@ -47,5 +48,6 @@ module.exports = {
   datasource: datasources,
   model:models,
   app: app,
-  boot: boot
+  boot: boot,
+  port: port
 }
