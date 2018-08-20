@@ -1,1 +1,1 @@
-{"name":"users","base":"User","idInjection":true,"options":{"validateUpsert":true},"properties":{"firstname":{"type":"string"},"lastname":{"type":"string"},"username":{"type":"string","required":true"}},"hidden":["realm","emailVerified","id"],"validations":[],"relations":{},"acls":[]}
+{"name":"users","base":"User","idInjection":true,"options":{"validateUpsert":true},"properties":{"firstname":{"type":"string"},"lastname":{"type":"string"},"username":{"type":"string","required":true}},"hidden":["realm","emailVerified","id"],"validations":[],"relations":{},"acls":[]}
